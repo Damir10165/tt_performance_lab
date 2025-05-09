@@ -14,7 +14,7 @@ def get_value_by_id(values: list[dict], id_val: int) -> str | None:
 def tree_traversal(tests: list[dict], values: list[dict]) -> None:
     """
     Функция, которая рекурсивно обходит список словарей tests и находит по идентификатору 'id' значения из values
-     и записывает в словари tests по ключу 'value'
+    и записывает в словари tests по ключу 'value'
     """
     for test in tests:
         # проверяем наличие ключа 'value'
