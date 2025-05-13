@@ -1,3 +1,4 @@
+import sys
 import json
 
 
@@ -30,12 +31,10 @@ def tree_traversal(tests: list[dict], values: list[dict]) -> None:
 
 
 if __name__ == '__main__':
-    # путь к результатам прохождения теста
-    values_way = input()
-    # путь к структуре для построения отчета на основе прохождения тестов
-    test_way = input()
-    # путь для записи результата
-    report_way = input()
+    # values_way - путь к результатам прохождения теста
+    # test_way - путь к структуре для построения отчета на основе прохождения тестов
+    # report_way - путь для записи результата
+    values_way, test_way, report_way = sys.argv[1:]
 
     with open(values_way) as vf:
         values_data = json.loads(vf.read())

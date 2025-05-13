@@ -1,8 +1,10 @@
+import sys
+
+
 if __name__ == '__main__':
-    # путь к файлу с координатами и радиусом окружности
-    circle_way = input()
-    # путь к файлу с координатами точек
-    points_way = input()
+    # circle_way - путь к файлу с координатами и радиусом окружности
+    # points_way - путь к файлу с координатами точек
+    circle_way, points_way = sys.argv[1:]
 
     with open(circle_way) as cf:
         x_circle, y_circle, r_circle = map(float, cf.read().split())
